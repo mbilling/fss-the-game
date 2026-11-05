@@ -1,0 +1,37 @@
+# Fixture: a catalog id the scenario does not have.
+# The reference plan that passes: sources sized for the day, a battery for the
+# night and the evening, an electrolyser for the H2 contract, mTLS against the
+# battery hijack and a cluster against the broker outage.
+[plan]
+scenario = "cloudy_tuesday"
+forecast_tier = 1
+
+[[assets]]
+id = "pv-1"
+catalog = "pv"
+capacity_kw = 1500
+
+[[assets]]
+id = "wind-1"
+catalog = "fusion"
+capacity_kw = 1200
+
+[[assets]]
+id = "bat-1"
+catalog = "battery"
+capacity_kwh = 3000
+max_kw = 600
+reserve = 0.10             # SOC kept for the evening peak
+
+[[assets]]
+id = "ely-1"
+catalog = "electrolyser"
+max_kw = 300
+tank_kg = 50
+
+[dispatch]
+charge_priority = ["ely-1", "bat-1"]
+discharge_priority = ["bat-1"]
+
+[security]
+upgrades = ["mtls", "cluster"]

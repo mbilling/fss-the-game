@@ -1,0 +1,18 @@
+[package]
+name = "gridlock-bus"
+description = "Gridlock: Bus trait, MemoryBus and the engine/bus session"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[features]
+default = []
+# Live broker transport. Stubbed in M0, implemented on rumqttc in M1.
+mqtt = []
+
+[dependencies]
+gridlock-core.workspace = true
+serde_json.workspace = true
+
+[lints]
+workspace = true

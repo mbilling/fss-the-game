@@ -1,0 +1,25 @@
+# Spend everything on production: the forecast looks covered at midday, but
+# there is nothing to carry the night.
+[plan]
+scenario = "cloudy_tuesday"
+forecast_tier = 0
+
+[[assets]]
+id = "pv-1"
+catalog = "pv"
+capacity_kw = 3000
+
+[[assets]]
+id = "wind-1"
+catalog = "wind"
+capacity_kw = 1200
+
+[[assets]]
+id = "ely-1"
+catalog = "electrolyser"
+max_kw = 400
+tank_kg = 60
+
+[dispatch]
+charge_priority = ["ely-1"]
+discharge_priority = []

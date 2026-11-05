@@ -1,0 +1,4842 @@
+{
+  "scenario": "cloudy_tuesday",
+  "plan": {
+    "plan": {
+      "scenario": "cloudy_tuesday",
+      "forecast_tier": 1
+    },
+    "assets": [
+      {
+        "id": "pv-1",
+        "catalog": "pv",
+        "capacity_kw": 1500.0
+      },
+      {
+        "id": "wind-1",
+        "catalog": "wind",
+        "capacity_kw": 1200.0
+      },
+      {
+        "id": "bat-1",
+        "catalog": "battery",
+        "capacity_kwh": 3000.0,
+        "max_kw": 600.0,
+        "reserve": 0.1
+      },
+      {
+        "id": "ely-1",
+        "catalog": "electrolyser",
+        "max_kw": 300.0,
+        "tank_kg": 50.0
+      }
+    ],
+    "dispatch": {
+      "charge_priority": [
+        "ely-1",
+        "bat-1"
+      ],
+      "discharge_priority": [
+        "bat-1"
+      ]
+    },
+    "security": {
+      "upgrades": [
+        "mtls",
+        "cluster"
+      ]
+    }
+  },
+  "plan_cost": 163.0,
+  "interactions": [],
+  "ticks": [
+    {
+      "t": 0,
+      "harvested_kw": 310.8,
+      "demand_kw": 420.0,
+      "served_kw": 420.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 109.19999999999999,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 310.8,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 109.19999999999999,
+          "soc": 0.490421052631579,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 1,
+      "harvested_kw": 314.28000000000003,
+      "demand_kw": 420.0,
+      "served_kw": 420.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 105.71999999999997,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 314.28000000000003,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 105.71999999999997,
+          "soc": 0.4811473684210526,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 2,
+      "harvested_kw": 318.12,
+      "demand_kw": 420.0,
+      "served_kw": 420.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 101.88,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 318.12,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 101.88,
+          "soc": 0.47221052631578947,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 3,
+      "harvested_kw": 321.96,
+      "demand_kw": 420.0,
+      "served_kw": 420.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 98.04000000000002,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 321.96,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 98.04000000000002,
+          "soc": 0.4636105263157895,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 4,
+      "harvested_kw": 326.04,
+      "demand_kw": 420.0,
+      "served_kw": 420.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 93.95999999999998,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 326.04,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 93.95999999999998,
+          "soc": 0.4553684210526316,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 5,
+      "harvested_kw": 330.24,
+      "demand_kw": 420.0,
+      "served_kw": 420.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 89.75999999999999,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 330.24,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 89.75999999999999,
+          "soc": 0.4474947368421053,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 6,
+      "harvested_kw": 334.67999999999995,
+      "demand_kw": 420.0,
+      "served_kw": 420.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 85.32000000000005,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 334.67999999999995,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 85.32000000000005,
+          "soc": 0.44001052631578946,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 7,
+      "harvested_kw": 339.12,
+      "demand_kw": 420.1,
+      "served_kw": 420.1,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 80.98000000000002,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 339.12,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 80.98000000000002,
+          "soc": 0.43290701754385963,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 8,
+      "harvested_kw": 343.68,
+      "demand_kw": 420.1,
+      "served_kw": 420.1,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 76.42000000000002,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 343.68,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 76.42000000000002,
+          "soc": 0.4262035087719298,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 9,
+      "harvested_kw": 348.24,
+      "demand_kw": 420.1,
+      "served_kw": 420.1,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 71.86000000000001,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 348.24,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 71.86000000000001,
+          "soc": 0.4199,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 10,
+      "harvested_kw": 352.91999999999996,
+      "demand_kw": 420.2,
+      "served_kw": 420.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 67.28000000000003,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 352.91999999999996,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 67.28000000000003,
+          "soc": 0.4139982456140351,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 11,
+      "harvested_kw": 357.59999999999997,
+      "demand_kw": 420.3,
+      "served_kw": 420.3,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 62.700000000000045,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 357.59999999999997,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 62.700000000000045,
+          "soc": 0.40849824561403514,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 12,
+      "harvested_kw": 362.4,
+      "demand_kw": 420.4,
+      "served_kw": 420.4,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 58.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 362.4,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 58.0,
+          "soc": 0.4034105263157895,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 13,
+      "harvested_kw": 367.08,
+      "demand_kw": 420.6,
+      "served_kw": 420.6,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 53.52000000000004,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 367.08,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 53.52000000000004,
+          "soc": 0.39871578947368425,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 14,
+      "harvested_kw": 371.76000000000005,
+      "demand_kw": 420.8,
+      "served_kw": 420.8,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 49.039999999999964,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 371.76000000000005,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 49.039999999999964,
+          "soc": 0.39441403508771933,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 15,
+      "harvested_kw": 376.32,
+      "demand_kw": 421.2,
+      "served_kw": 421.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 44.879999999999995,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 376.32,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 44.879999999999995,
+          "soc": 0.39047719298245614,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 16,
+      "harvested_kw": 380.88,
+      "demand_kw": 421.9,
+      "served_kw": 421.9,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 41.01999999999998,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 380.88,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 41.01999999999998,
+          "soc": 0.38687894736842104,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 17,
+      "harvested_kw": 385.32,
+      "demand_kw": 423.1,
+      "served_kw": 423.1,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 37.78000000000003,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 385.32,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 37.78000000000003,
+          "soc": 0.3835649122807018,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 18,
+      "harvested_kw": 389.76,
+      "demand_kw": 425.0,
+      "served_kw": 425.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 35.24000000000001,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 389.76,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 35.24000000000001,
+          "soc": 0.3804736842105263,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 19,
+      "harvested_kw": 393.96,
+      "demand_kw": 428.3,
+      "served_kw": 428.3,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 34.34000000000003,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 393.96,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 34.34000000000003,
+          "soc": 0.37746140350877194,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 20,
+      "harvested_kw": 398.04,
+      "demand_kw": 433.6,
+      "served_kw": 433.6,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 35.56,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 398.04,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 35.56,
+          "soc": 0.3743421052631579,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 21,
+      "harvested_kw": 401.88,
+      "demand_kw": 441.8,
+      "served_kw": 441.8,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 39.920000000000016,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 401.88,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 39.920000000000016,
+          "soc": 0.370840350877193,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 22,
+      "harvested_kw": 405.72,
+      "demand_kw": 454.1,
+      "served_kw": 454.1,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 48.379999999999995,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 405.72,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 48.379999999999995,
+          "soc": 0.3665964912280702,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 23,
+      "harvested_kw": 412.65000000000003,
+      "demand_kw": 471.3,
+      "served_kw": 471.3,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 58.64999999999998,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 3.4499999999999997,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 409.20000000000005,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 58.64999999999998,
+          "soc": 0.36145175438596494,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 24,
+      "harvested_kw": 432.51,
+      "demand_kw": 494.2,
+      "served_kw": 494.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 61.69,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 19.95,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 412.56,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 61.69,
+          "soc": 0.356040350877193,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 25,
+      "harvested_kw": 460.68,
+      "demand_kw": 523.0,
+      "served_kw": 523.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 62.31999999999999,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 45.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 415.68,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 62.31999999999999,
+          "soc": 0.3505736842105263,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 26,
+      "harvested_kw": 495.36,
+      "demand_kw": 556.9,
+      "served_kw": 556.9,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 61.539999999999964,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 76.8,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 418.56,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 61.539999999999964,
+          "soc": 0.34517543859649125,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 27,
+      "harvested_kw": 535.35,
+      "demand_kw": 593.9,
+      "served_kw": 593.9,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 58.549999999999955,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 114.15,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 421.2,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 58.549999999999955,
+          "soc": 0.34003947368421056,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 28,
+      "harvested_kw": 579.63,
+      "demand_kw": 631.3,
+      "served_kw": 631.3,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 51.66999999999996,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 156.15,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 423.48,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 51.66999999999996,
+          "soc": 0.3355070175438597,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 29,
+      "harvested_kw": 627.84,
+      "demand_kw": 665.4,
+      "served_kw": 665.4,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 37.559999999999945,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 202.20000000000002,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 425.64000000000004,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 37.559999999999945,
+          "soc": 0.33221228070175446,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 30,
+      "harvested_kw": 678.99,
+      "demand_kw": 692.4,
+      "served_kw": 692.4,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 13.409999999999968,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 251.54999999999998,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 427.44,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 13.409999999999968,
+          "soc": 0.33103596491228077,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 31,
+      "harvested_kw": 732.63,
+      "demand_kw": 709.4,
+      "served_kw": 709.4,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 23.230000000000018,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 303.75,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 428.88,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 0.33103596491228077,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -23.230000000000018,
+          "soc": null,
+          "tank_kg": 0.11848484848484858,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 32,
+      "harvested_kw": 788.13,
+      "demand_kw": 714.6,
+      "served_kw": 714.6,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 73.52999999999997,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 358.05,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 430.08,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 0.33103596491228077,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -73.52999999999997,
+          "soc": null,
+          "tank_kg": 0.49352535253525354,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 33,
+      "harvested_kw": 845.0400000000001,
+      "demand_kw": 708.1,
+      "served_kw": 708.1,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 136.94000000000005,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 414.00000000000006,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 431.04,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 0.33103596491228077,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -136.94000000000005,
+          "soc": null,
+          "tank_kg": 1.1919891989198925,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 34,
+      "harvested_kw": 902.3400000000001,
+      "demand_kw": 691.6,
+      "served_kw": 691.6,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 210.74000000000012,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 470.70000000000005,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 431.64000000000004,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 0.33103596491228077,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -210.74000000000012,
+          "soc": null,
+          "tank_kg": 2.266870687068708,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 35,
+      "harvested_kw": 958.95,
+      "demand_kw": 668.0,
+      "served_kw": 668.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 290.95000000000005,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 526.95,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 432.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 0.33103596491228077,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -290.95000000000005,
+          "soc": null,
+          "tank_kg": 3.7508640864086424,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 36,
+      "harvested_kw": 1011.9,
+      "demand_kw": 641.2,
+      "served_kw": 641.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 70.69999999999993,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 579.9,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 432.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -70.69999999999993,
+          "soc": 0.3366330482456141,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 5.281017101710173,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 37,
+      "harvested_kw": 1055.3400000000001,
+      "demand_kw": 614.6,
+      "served_kw": 614.6,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 140.74000000000012,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 623.7,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 431.64000000000004,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -140.74000000000012,
+          "soc": 0.3477749649122807,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 6.811170117011703,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 38,
+      "harvested_kw": 1079.34,
+      "demand_kw": 591.2,
+      "served_kw": 591.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 188.13999999999987,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 648.3,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 431.04,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -188.13999999999987,
+          "soc": 0.3626693815789474,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 8.341323132313233,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 39,
+      "harvested_kw": 1071.48,
+      "demand_kw": 572.8,
+      "served_kw": 572.8,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 198.68000000000006,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 641.4,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 430.08,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -198.68000000000006,
+          "soc": 0.37839821491228076,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 9.871476147614764,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 40,
+      "harvested_kw": 1025.13,
+      "demand_kw": 560.0,
+      "served_kw": 560.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 165.1300000000001,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 596.25,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 428.88,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -165.1300000000001,
+          "soc": 0.3914710065789474,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 11.401629162916295,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 41,
+      "harvested_kw": 950.04,
+      "demand_kw": 552.7,
+      "served_kw": 552.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 97.33999999999992,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 522.6,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 427.44,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -97.33999999999992,
+          "soc": 0.39917708991228074,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 12.931782178217826,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 42,
+      "harvested_kw": 878.04,
+      "demand_kw": 550.1,
+      "served_kw": 550.1,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 27.93999999999994,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 452.4,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 425.64000000000004,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -27.93999999999994,
+          "soc": 0.4013890065789474,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 14.461935193519357,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 43,
+      "harvested_kw": 852.03,
+      "demand_kw": 551.2,
+      "served_kw": 551.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.8299999999999272,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 428.55,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 423.48,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -0.8299999999999272,
+          "soc": 0.4014547149122807,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 15.992088208820888,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 44,
+      "harvested_kw": 901.2,
+      "demand_kw": 555.7,
+      "served_kw": 555.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 45.5,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 480.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 421.2,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -45.5,
+          "soc": 0.405056798245614,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 17.522241224122418,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 45,
+      "harvested_kw": 1020.21,
+      "demand_kw": 564.7,
+      "served_kw": 564.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 155.51,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 601.65,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 418.56,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -155.51,
+          "soc": 0.41736800657894735,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 19.052394239423947,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 46,
+      "harvested_kw": 1174.23,
+      "demand_kw": 580.6,
+      "served_kw": 580.6,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 293.63,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 758.5500000000001,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 415.68,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -293.63,
+          "soc": 0.4406137149122807,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 20.582547254725476,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 47,
+      "harvested_kw": 1320.36,
+      "demand_kw": 602.4,
+      "served_kw": 602.4,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 417.9599999999999,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 907.8,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 412.56,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -417.9599999999999,
+          "soc": 0.4737022149122807,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 22.112700270027005,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 48,
+      "harvested_kw": 1431.45,
+      "demand_kw": 620.7,
+      "served_kw": 620.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 510.75,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 1022.25,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 409.20000000000005,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -510.75,
+          "soc": 0.5141365899122806,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 23.642853285328535,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 49,
+      "harvested_kw": 1501.77,
+      "demand_kw": 624.2,
+      "served_kw": 624.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 577.5699999999999,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 1096.05,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 405.72,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -577.5699999999999,
+          "soc": 0.5598608815789473,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 25.173006300630064,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 50,
+      "harvested_kw": 1539.7800000000002,
+      "demand_kw": 612.5,
+      "served_kw": 612.5,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 27.2800000000002,
+      "charge_kw": 600.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 1137.9,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 401.88,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -600.0,
+          "soc": 0.6073608815789473,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 26.703159315931593,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 51,
+      "harvested_kw": 1556.9700000000003,
+      "demand_kw": 596.8,
+      "served_kw": 596.8,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 60.1700000000003,
+      "charge_kw": 600.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 1159.0500000000002,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 397.92,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -600.0,
+          "soc": 0.6548608815789473,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 28.233312331233122,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 52,
+      "harvested_kw": 1167.8999999999999,
+      "demand_kw": 585.8,
+      "served_kw": 585.8,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 282.0999999999999,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 1167.8999999999999,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "offline"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -282.0999999999999,
+          "soc": 0.677193798245614,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 29.76346534653465,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 53,
+      "harvested_kw": 1168.95,
+      "demand_kw": 580.2,
+      "served_kw": 580.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 288.75,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 1168.95,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "offline"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -288.75,
+          "soc": 0.700053173245614,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 31.29361836183618,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 54,
+      "harvested_kw": 1164.15,
+      "demand_kw": 576.6,
+      "served_kw": 576.6,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 287.55000000000007,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 1164.15,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "offline"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -287.55000000000007,
+          "soc": 0.7228175482456141,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 32.82377137713771,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 55,
+      "harvested_kw": 1153.8,
+      "demand_kw": 572.9,
+      "served_kw": 572.9,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 280.9,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 1153.8,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "offline"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -280.9,
+          "soc": 0.7450554649122807,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 34.35392439243924,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 56,
+      "harvested_kw": 1137.0,
+      "demand_kw": 568.5,
+      "served_kw": 568.5,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 268.5,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 1137.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "offline"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -268.5,
+          "soc": 0.7663117149122807,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 35.88407740774077,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 57,
+      "harvested_kw": 1108.8,
+      "demand_kw": 563.4,
+      "served_kw": 563.4,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 245.39999999999998,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 1108.8,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "offline"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -245.39999999999998,
+          "soc": 0.7857392149122806,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 37.4142304230423,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 58,
+      "harvested_kw": 1054.8000000000002,
+      "demand_kw": 558.0,
+      "served_kw": 558.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 196.80000000000018,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 1054.8000000000002,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "offline"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -196.80000000000018,
+          "soc": 0.8013192149122808,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 38.94438343834383,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 59,
+      "harvested_kw": 956.5500000000001,
+      "demand_kw": 552.7,
+      "served_kw": 552.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 103.85000000000002,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 956.5500000000001,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "offline"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -103.85000000000002,
+          "soc": 0.809540673245614,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 40.47453645364536,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 60,
+      "harvested_kw": 1107.27,
+      "demand_kw": 548.0,
+      "served_kw": 548.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 259.27,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 821.55,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 285.72,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -259.27,
+          "soc": 0.8300662149122807,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 42.004689468946886,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 61,
+      "harvested_kw": 971.25,
+      "demand_kw": 544.8,
+      "served_kw": 544.8,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 126.45000000000005,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 707.85,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 263.4,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -126.45000000000005,
+          "soc": 0.8400768399122808,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 43.534842484248415,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 62,
+      "harvested_kw": 927.15,
+      "demand_kw": 544.0,
+      "served_kw": 544.0,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 83.14999999999998,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 678.15,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 249.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -83.14999999999998,
+          "soc": 0.8466595482456142,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 45.064995499549944,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 63,
+      "harvested_kw": 970.71,
+      "demand_kw": 546.9,
+      "served_kw": 546.9,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 123.81000000000006,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 722.5500000000001,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 248.16000000000003,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -123.81000000000006,
+          "soc": 0.8564611732456142,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 46.59514851485147,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 64,
+      "harvested_kw": 1036.6799999999998,
+      "demand_kw": 554.5,
+      "served_kw": 554.5,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 182.17999999999984,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 771.5999999999999,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 265.08000000000004,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -182.17999999999984,
+          "soc": 0.8708837565789476,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 48.125301530153,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 65,
+      "harvested_kw": 1079.4299999999998,
+      "demand_kw": 568.2,
+      "served_kw": 568.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 211.2299999999998,
+      "discharge_kw": 0.0,
+      "ely_kw": 300.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 778.9499999999999,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 300.48,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -211.2299999999998,
+          "soc": 0.8876061315789475,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -300.0,
+          "soc": null,
+          "tank_kg": 49.65545454545453,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 66,
+      "harvested_kw": 1100.37,
+      "demand_kw": 588.9,
+      "served_kw": 588.9,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 443.91882352940905,
+      "discharge_kw": 0.0,
+      "ely_kw": 67.55117647059087,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 748.05,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 352.32000000000005,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -443.91882352940905,
+          "soc": 0.9227497051083591,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": -67.55117647059087,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 67,
+      "harvested_kw": 1114.89,
+      "demand_kw": 617.1,
+      "served_kw": 617.1,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 497.7900000000001,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 698.85,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 416.04,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -497.7900000000001,
+          "soc": 0.962158080108359,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 68,
+      "harvested_kw": 1130.01,
+      "demand_kw": 652.7,
+      "served_kw": 652.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 477.30999999999995,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 643.65,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 486.36,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -477.30999999999995,
+          "soc": 0.9999451217750257,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 69,
+      "harvested_kw": 1144.8600000000001,
+      "demand_kw": 694.5,
+      "served_kw": 694.5,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 449.6668013687452,
+      "charge_kw": 0.6931986312548888,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 586.5,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 558.36,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": -0.6931986312548888,
+          "soc": 1.0,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 70,
+      "harvested_kw": 1156.71,
+      "demand_kw": 740.4,
+      "served_kw": 740.4,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 416.31000000000006,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 528.75,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 627.96,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 1.0,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 71,
+      "harvested_kw": 1162.95,
+      "demand_kw": 787.2,
+      "served_kw": 787.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 375.75,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 471.15,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 691.8000000000001,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 1.0,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 72,
+      "harvested_kw": 1161.27,
+      "demand_kw": 831.2,
+      "served_kw": 831.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 330.06999999999994,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 414.15000000000003,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 747.12,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 1.0,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 73,
+      "harvested_kw": 1149.48,
+      "demand_kw": 868.3,
+      "served_kw": 868.3,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 281.18000000000006,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 358.20000000000005,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 791.28,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 1.0,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 74,
+      "harvested_kw": 1125.3899999999999,
+      "demand_kw": 895.2,
+      "served_kw": 895.2,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 230.18999999999983,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 303.75,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 821.64,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 1.0,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 75,
+      "harvested_kw": 1087.83,
+      "demand_kw": 909.6,
+      "served_kw": 909.6,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 178.2299999999999,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 251.54999999999998,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 836.28,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 1.0,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 76,
+      "harvested_kw": 1036.44,
+      "demand_kw": 911.6,
+      "served_kw": 911.6,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 124.84000000000003,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 202.20000000000002,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 834.24,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 1.0,
+          "tank_kg": null,
+          "status": "idle"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "idle"
+        }
+      ]
+    },
+    {
+      "t": 77,
+      "harvested_kw": 971.91,
+      "demand_kw": 902.8,
+      "served_kw": 902.8,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 69.11000000000001,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 156.15,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 815.76,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 1.0,
+          "tank_kg": null,
+          "status": "idle"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "idle"
+        }
+      ]
+    },
+    {
+      "t": 78,
+      "harvested_kw": 896.55,
+      "demand_kw": 884.7,
+      "served_kw": 884.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 11.849999999999909,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 114.15,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 782.4,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 0.0,
+          "soc": 1.0,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 79,
+      "harvested_kw": 813.8399999999999,
+      "demand_kw": 856.7,
+      "served_kw": 856.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 42.86000000000013,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 76.8,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 737.04,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 42.86000000000013,
+          "soc": 0.996240350877193,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 50.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 80,
+      "harvested_kw": 728.4,
+      "demand_kw": 816.3,
+      "served_kw": 816.3,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 87.89999999999998,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 45.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 683.4,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 87.89999999999998,
+          "soc": 0.9885298245614035,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 81,
+      "harvested_kw": 645.51,
+      "demand_kw": 762.3,
+      "served_kw": 762.3,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 116.78999999999996,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 19.95,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 625.56,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 116.78999999999996,
+          "soc": 0.9782850877192983,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 82,
+      "harvested_kw": 570.8100000000001,
+      "demand_kw": 698.6,
+      "served_kw": 698.6,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 127.78999999999996,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 3.4499999999999997,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 567.36,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 127.78999999999996,
+          "soc": 0.9670754385964914,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 83,
+      "harvested_kw": 512.28,
+      "demand_kw": 633.4,
+      "served_kw": 633.4,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 121.12,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 512.28,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 121.12,
+          "soc": 0.9564508771929826,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 84,
+      "harvested_kw": 462.71999999999997,
+      "demand_kw": 575.3,
+      "served_kw": 575.3,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 112.57999999999998,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 462.71999999999997,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 112.57999999999998,
+          "soc": 0.9465754385964913,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 85,
+      "harvested_kw": 420.12,
+      "demand_kw": 528.8,
+      "served_kw": 528.8,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 108.67999999999995,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 420.12,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 108.67999999999995,
+          "soc": 0.937042105263158,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 86,
+      "harvested_kw": 385.44,
+      "demand_kw": 494.3,
+      "served_kw": 494.3,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 108.86000000000001,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 385.44,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 108.86000000000001,
+          "soc": 0.9274929824561404,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 87,
+      "harvested_kw": 358.32,
+      "demand_kw": 469.7,
+      "served_kw": 469.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 111.38,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 358.32,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 111.38,
+          "soc": 0.9177228070175439,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 88,
+      "harvested_kw": 338.15999999999997,
+      "demand_kw": 452.5,
+      "served_kw": 452.5,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 114.34000000000003,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 338.15999999999997,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 114.34000000000003,
+          "soc": 0.9076929824561404,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 89,
+      "harvested_kw": 323.88,
+      "demand_kw": 440.7,
+      "served_kw": 440.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 116.82,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 323.88,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 116.82,
+          "soc": 0.8974456140350877,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 90,
+      "harvested_kw": 314.64,
+      "demand_kw": 432.8,
+      "served_kw": 432.8,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 118.16000000000003,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 314.64,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 118.16000000000003,
+          "soc": 0.887080701754386,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 91,
+      "harvested_kw": 309.12,
+      "demand_kw": 427.7,
+      "served_kw": 427.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 118.57999999999998,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 309.12,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 118.57999999999998,
+          "soc": 0.876678947368421,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 92,
+      "harvested_kw": 306.48,
+      "demand_kw": 424.5,
+      "served_kw": 424.5,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 118.01999999999998,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 306.48,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 118.01999999999998,
+          "soc": 0.8663263157894736,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 93,
+      "harvested_kw": 306.0,
+      "demand_kw": 422.5,
+      "served_kw": 422.5,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 116.5,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 306.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 116.5,
+          "soc": 0.8561070175438596,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 94,
+      "harvested_kw": 306.96000000000004,
+      "demand_kw": 421.4,
+      "served_kw": 421.4,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 114.43999999999994,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 306.96000000000004,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 114.43999999999994,
+          "soc": 0.8460684210526315,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 95,
+      "harvested_kw": 308.88,
+      "demand_kw": 420.7,
+      "served_kw": 420.7,
+      "unmet_kw": 0.0,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 111.82,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 3,
+      "outage": false,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 308.88,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "bat-1",
+          "p_kw": 111.82,
+          "soc": 0.8362596491228069,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 10.0,
+          "status": "ok"
+        }
+      ]
+    }
+  ],
+  "attacks": [
+    {
+      "at": 60,
+      "vector": "credential_theft",
+      "target": "bat-1",
+      "blocked_by": "mtls",
+      "mitigated_by": null,
+      "ticks": 8,
+      "landed": false,
+      "alert_t": null
+    },
+    {
+      "at": 76,
+      "vector": "broker_outage",
+      "target": null,
+      "blocked_by": null,
+      "mitigated_by": "cluster",
+      "ticks": 2,
+      "landed": true,
+      "alert_t": null
+    }
+  ],
+  "score": {
+    "stars": 3,
+    "efficiency": 0.9775189701857931,
+    "co2_kg": 0.0,
+    "co2_cap_kg": 400.0,
+    "pass": true,
+    "reasons": [],
+    "contracts_met": 1,
+    "contracts_total": 1,
+    "target_efficiency": 0.9,
+    "harvested_kwh": 17926.207500000008,
+    "curtailed_kwh": 638.6617003421865,
+    "export_kwh": 0.0,
+    "losses_kwh": 939.7668522893923,
+    "leftover_kwh": 1175.4289473684207,
+    "ticks_played": 96,
+    "ended_early": false,
+    "budget": 180.0,
+    "budget_used": 163.0,
+    "star_losses": []
+  },
+  "findings": [
+    {
+      "kind": "curtailment",
+      "t_from": 69,
+      "t_to": 78,
+      "kwh": 616.7992003421863,
+      "asset": "bat-1",
+      "text": "Between 17:15 and 19:45 you threw away 617 kWh. bat-1 was full; more storage or a bigger electrolyser would have soaked it up."
+    },
+    {
+      "kind": "attack",
+      "t_from": 60,
+      "t_to": 67,
+      "kwh": 0.0,
+      "asset": "bat-1",
+      "text": "credential_theft on bat-1 at 15:00 was blocked by mtls."
+    },
+    {
+      "kind": "attack",
+      "t_from": 76,
+      "t_to": 77,
+      "kwh": 0.0,
+      "asset": null,
+      "text": "broker_outage at 19:00 landed. cluster failed over, so it only lasted 2 ticks. It cost 0 star(s) and 0 kWh."
+    },
+    {
+      "kind": "losses",
+      "t_from": 0,
+      "t_to": 95,
+      "kwh": 155.5315581717452,
+      "asset": "bat-1",
+      "text": "bat-1 lost 156 kWh to conversion; that counts against efficiency."
+    },
+    {
+      "kind": "losses",
+      "t_from": 0,
+      "t_to": 95,
+      "kwh": 784.2352941176472,
+      "asset": "ely-1",
+      "text": "ely-1 lost 784 kWh to conversion; that counts against efficiency."
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "scenario": "cloudy_tuesday",
+  "plan": {
+    "plan": {
+      "scenario": "cloudy_tuesday",
+      "forecast_tier": 0
+    },
+    "assets": [
+      {
+        "id": "pv-1",
+        "catalog": "pv",
+        "capacity_kw": 3000.0
+      },
+      {
+        "id": "wind-1",
+        "catalog": "wind",
+        "capacity_kw": 1200.0
+      },
+      {
+        "id": "ely-1",
+        "catalog": "electrolyser",
+        "max_kw": 400.0,
+        "tank_kg": 60.0
+      }
+    ],
+    "dispatch": {
+      "charge_priority": [
+        "ely-1"
+      ],
+      "discharge_priority": []
+    }
+  },
+  "plan_cost": 120.8,
+  "interactions": [],
+  "ticks": [
+    {
+      "t": 0,
+      "harvested_kw": 310.8,
+      "demand_kw": 420.0,
+      "served_kw": 310.8,
+      "unmet_kw": 109.19999999999999,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 2,
+      "outage": true,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 310.8,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 1,
+      "harvested_kw": 314.28000000000003,
+      "demand_kw": 420.0,
+      "served_kw": 314.28000000000003,
+      "unmet_kw": 105.71999999999997,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 1,
+      "outage": true,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 314.28000000000003,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "t": 2,
+      "harvested_kw": 318.12,
+      "demand_kw": 420.0,
+      "served_kw": 318.12,
+      "unmet_kw": 101.88,
+      "curtailed_kw": 0.0,
+      "charge_kw": 0.0,
+      "discharge_kw": 0.0,
+      "ely_kw": 0.0,
+      "fc_kw": 0.0,
+      "export_kw": 0.0,
+      "import_kw": 0.0,
+      "boost_kw": 0.0,
+      "co2_kg": 0.0,
+      "credits_kwh": 0.0,
+      "stars": 0,
+      "outage": true,
+      "assets": [
+        {
+          "id": "pv-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "wind-1",
+          "p_kw": 318.12,
+          "soc": null,
+          "tank_kg": null,
+          "status": "ok"
+        },
+        {
+          "id": "ely-1",
+          "p_kw": 0.0,
+          "soc": null,
+          "tank_kg": 0.0,
+          "status": "ok"
+        }
+      ]
+    }
+  ],
+  "attacks": [],
+  "score": {
+    "stars": 0,
+    "efficiency": 1.0,
+    "co2_kg": 0.0,
+    "co2_cap_kg": 400.0,
+    "pass": false,
+    "reasons": [
+      "stars",
+      "contract"
+    ],
+    "contracts_met": 0,
+    "contracts_total": 1,
+    "target_efficiency": 0.9,
+    "harvested_kwh": 235.8,
+    "curtailed_kwh": 0.0,
+    "export_kwh": 0.0,
+    "losses_kwh": 0.0,
+    "leftover_kwh": 0.0,
+    "ticks_played": 3,
+    "ended_early": true,
+    "budget": 180.0,
+    "budget_used": 120.8,
+    "star_losses": [
+      {
+        "t": 0,
+        "cause": "outage: 109 kW unmet"
+      },
+      {
+        "t": 1,
+        "cause": "outage: 106 kW unmet"
+      },
+      {
+        "t": 2,
+        "cause": "outage: 102 kW unmet"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "outage",
+      "t_from": 0,
+      "t_to": 0,
+      "kwh": 27.299999999999997,
+      "asset": null,
+      "text": "At 00:00 you were 109 kW short. One boost armed the tick before would have covered it."
+    },
+    {
+      "kind": "outage",
+      "t_from": 1,
+      "t_to": 1,
+      "kwh": 26.429999999999993,
+      "asset": null,
+      "text": "At 00:15 you were 106 kW short. One boost armed the tick before would have covered it."
+    },
+    {
+      "kind": "outage",
+      "t_from": 2,
+      "t_to": 2,
+      "kwh": 25.47,
+      "asset": null,
+      "text": "At 00:30 you were 102 kW short. One boost armed the tick before would have covered it."
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+# Fixture: the actual demand curve is 5 rows short.
+# Cloudy Tuesday: the first Gridlock level.
+# Costs, budget and target are tuned so that tests/golden/plans/balanced.toml
+# passes with ~10% budget headroom, no_storage.toml is tempting but fails,
+# and unsecured.toml looks fine until the battery hijack at tick 60.
+
+[round]
+id = "cloudy_tuesday"
+name = "Cloudy Tuesday"
+tick_minutes = 15
+budget = 180
+target_efficiency = 0.90
+co2_cap_kg = 400
+stars = 3
+outage_tolerance = 0.02
+
+[boost]
+kw = 400
+charges = 1
+co2_per_kwh = 0.45
+credit_kwh = 1000          # export kWh per extra charge; 0 = off
+
+[forecast]                 # what the player sees in Plan
+demand = "../../../scenarios/cloudy_tuesday/curves/tue_demand_forecast.csv"
+pv = "../../../scenarios/cloudy_tuesday/curves/tue_pv_forecast.csv"
+wind = "../../../scenarios/cloudy_tuesday/curves/tue_wind_forecast.csv"
+
+[actual]                   # what plays out; hidden until revealed
+demand = "short_demand.csv"
+pv = "../../../scenarios/cloudy_tuesday/curves/tue_pv_actual.csv"
+wind = "../../../scenarios/cloudy_tuesday/curves/tue_wind_actual.csv"
+
+[[actual.events]]
+at = 52
+kind = "outage"
+asset_catalog = "wind"     # applies to every plan asset of this catalog id
+ticks = 8
+
+[[actual.events]]
+at = 60
+kind = "attack"
+vector = "credential_theft"
+target_catalog = "battery"
+ticks = 8
+
+[[actual.events]]
+at = 76
+kind = "attack"
+vector = "broker_outage"
+ticks = 8
+
+[[forecast_tiers]]
+tier = 0
+lookahead_ticks = 0
+cost = 0
+
+[[forecast_tiers]]
+tier = 1
+lookahead_ticks = 4
+cost = 5
+
+[[forecast_tiers]]
+tier = 2
+lookahead_ticks = 12
+cost = 12
+
+[[forecast_tiers]]
+tier = 3
+lookahead_ticks = 24
+cost = 25
+
+[[catalog]]
+id = "pv"
+kind = "source"
+curve = "pv"
+cost_per_kw = 0.02
+max_capacity_kw = 3000
+
+[[catalog]]
+id = "wind"
+kind = "source"
+curve = "wind"
+cost_per_kw = 0.03
+max_capacity_kw = 2000
+
+[[catalog]]
+id = "battery"
+kind = "storage"
+eta_in = 0.95
+eta_out = 0.95
+soc_init = 0.5
+cost_per_kwh = 0.008
+cost_per_kw = 0.015
+
+[[catalog]]
+id = "pumped_hydro"
+kind = "storage"
+eta_in = 0.87
+eta_out = 0.87
+soc_init = 0.5
+cost_per_kwh = 0.003
+cost_per_kw = 0.04
+
+[[catalog]]
+id = "electrolyser"
+kind = "converter"
+input = "electricity"
+output = "h2"
+eta = 0.68
+kwh_per_kg = 33.33
+cost_per_kw = 0.05
+tank_cost_per_kg = 0.08
+
+[[catalog]]
+id = "fuel_cell"
+kind = "converter"
+input = "h2"
+output = "electricity"
+eta = 0.50
+kwh_per_kg = 33.33
+cost_per_kw = 0.06
+
+[[catalog]]
+id = "interconnector"
+kind = "interconnector"
+eta = 0.97
+co2_per_kwh_import = 0.15
+export_credit_ratio = 1.0
+cost_per_kw = 0.03
+max_kw = 1000              # export_kw and import_kw are capped here
+credits_init = 2500        # kWh of import credit carried over from yesterday
+
+[[catalog]]
+id = "mtls"
+kind = "security"
+cost = 20
+setup_ticks = 8
+defeats = ["credential_theft", "rogue_client"]
+
+[[catalog]]
+id = "acl"
+kind = "security"
+cost = 8
+setup_ticks = 2
+defeats = ["rogue_client"]
+
+[[catalog]]
+id = "cluster"
+kind = "security"
+cost = 20
+setup_ticks = 12
+failover_ticks = 2         # broker_outage becomes this long
+
+[[catalog]]
+id = "ids"
+kind = "security"
+cost = 10
+setup_ticks = 4
+warn_ticks = 4
+
+[[contracts]]
+product = "h2"
+kg = 40
+by_tick = 80
+
+[security]                 # M1 zones
+spread_ticks = 4
+isolate_busy_ticks = 2
+conduit_cost = 5

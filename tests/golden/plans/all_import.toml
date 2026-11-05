@@ -1,0 +1,28 @@
+# Lean on the grid: export the midday surplus for credits and import the rest.
+# Clean-ish per kWh, but the kWh add up past the CO2 cap.
+[plan]
+scenario = "cloudy_tuesday"
+forecast_tier = 0
+
+[[assets]]
+id = "pv-1"
+catalog = "pv"
+capacity_kw = 2500
+
+[[assets]]
+id = "wind-1"
+catalog = "wind"
+capacity_kw = 350
+
+[[assets]]
+id = "ic-1"
+catalog = "interconnector"
+export_kw = 900
+import_kw = 900
+
+[dispatch]
+charge_priority = ["ic-1"]
+discharge_priority = ["ic-1"]
+
+[security]
+upgrades = ["cluster"]
